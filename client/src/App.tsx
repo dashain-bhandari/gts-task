@@ -8,7 +8,7 @@ import AllPackages from './components/AllPackages'
 function App() {
 
   const [items, setItems] = useState<Product[] | null>(null)
-  const [order, setOrder] = useState<Order[]|null>(null)
+  const [order, setOrder] = useState<Order[] | null>(null)
   const [loading, setLoading] = useState(false);
   const [itemList, setItemList] = useState<Product[] | []>([])
 
@@ -78,7 +78,7 @@ function App() {
             <>
               {
                 order ? (<>
-                  <AllPackages order={order}/>
+                  <AllPackages order={order} />
                 </>) : (
                   <div className="w-full mx-auto px-4 md:px-8">
                     <div className=" flex items-center justify-between">
@@ -93,7 +93,7 @@ function App() {
                             <th className="py-3 px-6 whitespace-nowrap">Name</th>
                             <th className="py-3 px-6 whitespace-nowrap">Price</th>
                             <th className="py-3 px-6 whitespace-nowrap">Weight</th>
-
+                            <th className="py-3 px-6 whitespace-nowrap">Action</th>
                           </tr>
                         </thead>
                         <tbody className="text-gray-600 divide-y">
